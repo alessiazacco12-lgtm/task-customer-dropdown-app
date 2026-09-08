@@ -1,0 +1,86 @@
+/* CONTENITORE PRINCIPALE */
+.dropdown-container {
+  width: 90%;
+  max-width: 400px;
+  margin: 50px auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* TITOLO */
+h1 {
+  margin-bottom: 25px;
+}
+
+/* PULSANTE PRINCIPALE */
+.dropdown-button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.dropdown-button.open {
+  border-radius: 8px 8px 0 0;
+}
+
+/* FRECCIA */
+.arrow {
+  font-size: 14px;
+}
+
+/* CONTENITORE DELLE OPZIONI */
+.dropdown-options {
+  border: 1px solid black;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+}
+
+/* SINGOLA OPZIONE */
+.dropdown-option {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border: none;
+  border-bottom: 1px solid lightgray;
+  background-color: white;
+  font-size: 16px;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* RIMUOVO IL BORDO DALL'ULTIMA OPZIONE */
+.dropdown-option:last-child {
+  border-bottom: none;
+}
+
+/* HOVER */
+.dropdown-option:hover {
+  background-color: #f2f2f2;
+}
+
+/* OPZIONE SELEZIONATA */
+.dropdown-option.selected {
+  font-weight: bold;
+}
+
+/* SPUNTA A DESTRA CON IL CERCHIO NERO COME NEL MOCKUP */
+.checkmark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+}
