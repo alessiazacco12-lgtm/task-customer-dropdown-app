@@ -1,0 +1,33 @@
+<div class="dropdown-container">
+  <h1>Custom Dropdown</h1>
+
+  <!-- PULSANTE DEL DROPDOWN -->
+  <button type="button" class="dropdown-button" [class.open]="isOpen()" (click)="toggleDropdown()">
+    {{ selectedOption()?.label || 'Select an Item' }}
+
+    <span class="arrow">
+      {{ isOpen() ? '▲' : '▼' }}
+    </span>
+  </button>
+
+  <!-- ELENCO DELLE OPZIONI -->
+  @if (isOpen()) {
+    <div class="dropdown-options">
+      @for (option of options(); track option.id) {
+        <button
+          type="button"
+          class="dropdown-option"
+          [class.selected]="selectedOption()?.id === option.id"
+          (click)="selectOption(option)"
+        >
+          <span>{{ option.label }}</span>
+
+          <!-- ICONA CHECKMARK SE SELEZIONATO -->
+          @if (selectedOption()?.id === option.id) {
+            <span class="checkmark">✓</span>
+          }
+        </button>
+      }
+    </div>
+  }
+</div>
